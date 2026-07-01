@@ -31,11 +31,11 @@ public class Users extends BaseEntity {
     private Cart cart;
 
     // one to many relationship: 1 user ---------- n orders
-    @OneToMany(mappedBy = "orders")
+    @OneToMany(mappedBy = "user")
     private ArrayList<Orders> orders;
 
     // one to one relationship: 1 user -------------- n logs
-    @OneToMany(mappedBy = "tracking_logs")
+    @OneToMany(mappedBy = "user")
     private ArrayList<TrackingLogs> trackingLogs;
 
 }

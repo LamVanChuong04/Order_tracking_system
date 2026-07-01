@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 
 @Entity
+@Table(name = "orders")
 public class Orders extends BaseEntity{
 
     // many to one relationship: n orders ---------- 1 user
@@ -14,7 +15,7 @@ public class Orders extends BaseEntity{
     private Users user;
 
     // one to many relationship: 1 order ------- n product
-    @OneToMany(mappedBy = "orders")
+    @OneToMany(mappedBy = "order")
     private ArrayList<OrderItems> orderItems;
 
     // many to one relationship: n order----------- 1 carriers
@@ -23,7 +24,7 @@ public class Orders extends BaseEntity{
     private Carriers carrier;
 
     // one to many relationship: 1 order ------------- n logs
-    @OneToMany(mappedBy = "tracking_logs")
+    @OneToMany(mappedBy = "order")
     private ArrayList<TrackingLogs> trackingLogs;
 
 

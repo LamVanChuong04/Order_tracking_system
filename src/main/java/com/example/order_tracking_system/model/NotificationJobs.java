@@ -1,8 +1,6 @@
 package com.example.order_tracking_system.model;
-
 import jakarta.persistence.*;
 
-import javax.print.attribute.standard.MediaSize;
 
 @Entity
 @Table(name = "notification_jobs")

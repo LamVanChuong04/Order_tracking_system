@@ -19,6 +19,6 @@ public class Carriers  extends BaseEntity {
     private BigDecimal baseFee;
 
     // one to many relationship:
-    @OneToMany(mappedBy = "orders")
+    @OneToMany(mappedBy = "carrier")
     private ArrayList<Orders> orders;
 }

@@ -15,11 +15,11 @@ public class Cart extends BaseEntity{
 
 
     // one to one relationship: 1 user -------- 1 cart
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "cart")
     private Users user;
 
     // one to many relationship: 1 cart ------- n products
-    @OneToMany(mappedBy = "products")
+    @OneToMany(mappedBy = "cart")
     private ArrayList<Products> products;
 
 }
